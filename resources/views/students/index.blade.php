@@ -15,16 +15,16 @@
                     <th scope="col"></th>
                     </tr>
                 </thead>
+                @foreach ($students as $student)
                 <tbody>
-                    @foreach ($students as $student)
                     <tr>
                       <th scope="row">{{ $loop->iteration }}</th>
                       <td> {{ $student->nim }} </td>
                       <td> {{ $student->nama }} </td>
                       <td> <span class="badge badge-primary badge-pill">Detail</span> </td>
                     </tr>
-                    @endforeach;
                 </tbody>
+                @endforeach
             </table>
         </div>
     </div>
