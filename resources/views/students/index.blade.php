@@ -23,7 +23,7 @@
                       <td> {{ $student->nama }} </td>
                       <td> <span class="badge badge-primary badge-pill">Detail</span> </td>
                     </tr>
-                    @endforeach
+                    @endforeach;
                 </tbody>
             </table>
         </div>
