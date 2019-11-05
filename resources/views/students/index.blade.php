@@ -21,7 +21,7 @@
                       <th scope="row">{{ $loop->iteration }}</th>
                       <td> {{ $student->nim }} </td>
                       <td> {{ $student->nama }} </td>
-                      <td> <span class="badge badge-primary badge-pill">Detail</span> </td>
+                      <td> <a href="/students/{{$student->id}}" class="badge badge-primary badge-pill">Detail</a> </td>
                     </tr>
                 </tbody>
                 @endforeach
