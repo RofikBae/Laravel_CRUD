@@ -23,5 +23,7 @@ Route::get('/about', 'PagesController@about');
 Route::get('/students', 'StudentsController@index');
 Route::get('/students/create', 'StudentsController@create');
 Route::post('/students', 'StudentsController@store');
+Route::get('/students/{student}/edit', 'StudentsController@edit');
 Route::get('/students/{student}', 'StudentsController@show');
 Route::delete('/students/{student}', 'StudentsController@destroy');
+Route::patch('/students/{student}', 'StudentsController@update');

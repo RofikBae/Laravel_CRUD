@@ -59,7 +59,7 @@ class StudentsController extends Controller
      */
     public function edit(Student $student)
     {
-        //
+        return view('students.edit', compact('student'));
     }
 
     /**
@@ -71,7 +71,15 @@ class StudentsController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        //
+        Student::where('id', $student->id)
+            ->update([
+                'nim' => $request->nim,
+                'nama' => $request->nama,
+                'jurusan' => $request->jurusan,
+                'email' => $request->email
+            ]);
+
+        return redirect('/students');
     }
 
     /**
